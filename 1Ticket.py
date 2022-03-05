@@ -1,6 +1,4 @@
 from pydoc import importfile
-
-
 import SheetManager
 import salesManager
 
