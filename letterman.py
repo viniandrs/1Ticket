@@ -33,3 +33,5 @@ def sendMail(recipient, qrcode, id):
         smtp.send_message(msg)
     
     print("\nQRCode enviado por email!")
+
+#def resendEmail(id, email):

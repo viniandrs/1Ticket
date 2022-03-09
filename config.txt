@@ -1,8 +1,9 @@
-EMAIL DO VENDEDOR:
-SENHA DO VENDEDOR:
-ID GOOGLE SHEET: 
-ASSUNTO DO EMAIL: 
+EMAIL DO VENDEDOR: thedroyd000@gmail.com
+SENHA DO VENDEDOR: pombinhos
+ID GOOGLE SHEET: 1pTPAhQ_GvourOE5HxmctlsG_lR-QaUCdhPbfSB9sPjc
+ASSUNTO DO EMAIL: INGRESSO 1 TENDA DE MATRICULA
 TEXTO DO EMAIL: 
 {
+O seu ingresso é o QRCode em anexo. Não mostre-o para ninguém.
 ID: {}
 }
