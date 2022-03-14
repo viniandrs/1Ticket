@@ -16,19 +16,24 @@ def sellTicket():
 
     # Criando o ID do cliente
     last_id = int(SheetManager.getLastID())
-    id = str(last_id+1)
 
-    # Gerando o QRCode e o salvando no computador
-    code = qrcode.make("primeiroEmail-"+email+\
-                        "/phone-"+phone+"/ID:"+id)
-    code.show()
-    code.save("QRCodes/qrcodeID"+id+".png")
+    # Adicionando a opção de vender mais de um ingresso
+    numero_de_ingressos = int(input("Quantos ingressos serão comprados? "))
+    for i in range(numero_de_ingressos):
+        id = str(last_id+1+i)
 
-    # Enviando o email com o QRCode
-    letterman.sendMail(email, "qrcodeID"+id+".png", id)
+        print("Enviando o ingresso "+str(i+1))
 
-    # Atualizando a planilha
-    SheetManager.addCostumer(id, email, phone)
+        # Gerando o QRCode e o salvando no computador
+        code = qrcode.make("primeiroEmail-"+email+\
+                            "/phone-"+phone+"/ID:"+id)
+        code.save("QRCodes/qrcodeID"+id+".png")
+
+        # Enviando o email com o QRCode
+        letterman.sendMail(email, "qrcodeID"+id+".png", id)
+
+        # Atualizando a planilha
+        SheetManager.addCostumer(id, email, phone)
 
 def updateInfos():
     print("------- ATUALIZAR DADOS --------")

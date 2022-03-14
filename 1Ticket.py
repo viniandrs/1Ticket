@@ -1,7 +1,6 @@
 from pydoc import importfile
 import SheetManager
 import salesManager
-import letterman
 
 def main():
     # Conectando-se à planilha
